@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
         768,
         SDL_WINDOW_OPENGL
     );
+    SDL_GL_CreateContext(window);
     SDL_Event event;
 
     bool quit = false;
@@ -41,6 +42,10 @@ int main(int argc, char *argv[])
                 break;
             }
         }
+
+        glClearColor(0, 0, 0, 0);
+        glClear(GL_COLOR_BUFFER_BIT);
+        SDL_GL_SwapWindow(window);
     }
 
     SDL_DestroyWindow(window);
