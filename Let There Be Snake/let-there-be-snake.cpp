@@ -17,7 +17,6 @@ int main(int argc, char *argv[])
         SDL_WINDOW_OPENGL
     );
     SDL_GL_CreateContext(window);
-    SDL_Event event;
 
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
@@ -28,6 +27,8 @@ int main(int argc, char *argv[])
 
     while (!quit)
     {
+        SDL_Event event;
+
         while (SDL_PollEvent(&event))
         {
             switch (event.type)
