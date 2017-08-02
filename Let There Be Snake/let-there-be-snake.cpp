@@ -14,8 +14,33 @@ int main(int argc, char *argv[])
         768,
         SDL_WINDOW_OPENGL
     );
+    SDL_Event event;
 
-    SDL_Delay(3000);
+    bool quit = false;
+
+    while (!quit)
+    {
+        while (SDL_PollEvent(&event))
+        {
+            switch (event.type)
+            {
+            case SDL_KEYDOWN:
+                switch (event.key.keysym.sym)
+                {
+                case SDLK_ESCAPE:
+                    quit = true;
+                    break;
+                default:
+                    break;
+                }
+            case SDL_QUIT:
+                quit = true;
+                break;
+            default:
+                break;
+            }
+        }
+    }
 
     SDL_DestroyWindow(window);
     SDL_Quit();
