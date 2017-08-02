@@ -3,6 +3,8 @@
 #include <glew.h>
 #include <SDL.h>
 
+#include "board.h"
+
 int main(int argc, char *argv[])
 {
     SDL_Init(SDL_INIT_VIDEO);
@@ -10,14 +12,19 @@ int main(int argc, char *argv[])
         "Snake",
         SDL_WINDOWPOS_UNDEFINED,
         SDL_WINDOWPOS_UNDEFINED,
-        1024,
-        768,
+        720,
+        720,
         SDL_WINDOW_OPENGL
     );
     SDL_GL_CreateContext(window);
     SDL_Event event;
 
-    bool quit = false;
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    glOrtho(0, 100, 0, 100, 0, 1);
+
+    Board board;
+    bool  quit = false;
 
     while (!quit)
     {
@@ -43,8 +50,7 @@ int main(int argc, char *argv[])
             }
         }
 
-        glClearColor(0, 0, 0, 0);
-        glClear(GL_COLOR_BUFFER_BIT);
+        board.draw();
         SDL_GL_SwapWindow(window);
     }
 
