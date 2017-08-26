@@ -1,6 +1,9 @@
 #ifndef SNAKE_H
 #define SNAKE_H
 
+#include <vector>
+#include "tile.h"
+
 class Snake
 {
 public:
@@ -15,6 +18,8 @@ private:
     DIRECTION direction;
     int       length;
     bool      moving;
+
+    std::vector<Tile> tiles;
 };
 
 #endif SNAKE_H
