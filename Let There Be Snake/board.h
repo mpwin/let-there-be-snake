@@ -2,6 +2,7 @@
 #define BOARD_H
 
 #include "glew.h"
+#include "tile.h"
 
 class Board
 {
@@ -10,7 +11,10 @@ public:
     void draw();
 
 private:
-    int width, height;
+    int width();
+    int height();
+
+    int rows, cols;
 };
 
 #endif
