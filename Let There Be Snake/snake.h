@@ -2,7 +2,7 @@
 #define SNAKE_H
 
 #include <vector>
-#include "tile.h"
+#include "Tile.h"
 
 class Snake
 {
