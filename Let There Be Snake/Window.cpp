@@ -18,7 +18,7 @@ void Window::create()
 
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    glOrtho(0, 100, 0, 100, 0, 1);
+    glOrtho(0, Board::width, 0, Board::height, 0, 1);
 }
 
 void Window::update()

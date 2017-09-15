@@ -8,13 +8,14 @@ class Board
 {
 public:
     Board();
+    ~Board();
+
     void draw();
 
-private:
-    int width();
-    int height();
-
-    int rows, cols;
+    static const int rows   = 100;
+    static const int cols   = 100;
+    static const int width  = cols * Tile::width;
+    static const int height = rows * Tile::height;
 };
 
 #endif
