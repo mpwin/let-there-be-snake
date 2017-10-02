@@ -1,16 +1,23 @@
 #ifndef TILE_H
 #define TILE_H
 
-class Tile
+namespace Tile
 {
-public:
-    Tile(int row, int col);
-
     static const int width  = 1;
     static const int height = 1;
 
-private:
-    int row, col;
-};
+    class Base
+    {
+    protected:
+        int   row, col;
+        float r, g, b;
+    };
+
+    class Blank : public Base
+    {
+    public:
+        Blank(int row, int col);
+    };
+}
 
 #endif

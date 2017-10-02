@@ -19,7 +19,7 @@ private:
     int       length;
     bool      moving;
 
-    std::vector<Tile> tiles;
+    // std::vector<Tile> tiles;
 };
 
 #endif SNAKE_H
