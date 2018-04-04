@@ -12,6 +12,11 @@ Snake::Snake()
 
 Snake::~Snake() {}
 
+void Snake::eat()
+{
+    this->length += 3;
+}
+
 int Snake::get_row()
 {
     return row;

@@ -15,6 +15,7 @@ public:
     Snake();
     ~Snake();
 
+    void eat();
     int  get_row();
     int  get_col();
     void face_up();

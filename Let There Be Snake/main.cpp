@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
         if (!board.is_game_over())
         {
             current_time = SDL_GetTicks();
-            if (current_time > last_time + 30)
+            if (current_time > last_time + 40)
             {
                 board.update();
                 last_time = current_time;
