@@ -1,9 +1,8 @@
-#include <cstdlib>
-#include <glew.h>
-#include <SDL.h>
-
 #include "Board.h"
 #include "Window.h"
+#include <glew.h>
+#include <SDL.h>
+#include <cstdlib>
 
 int main(int argc, char *argv[])
 {
