@@ -1,8 +1,9 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-#include <glew.h>
+#include "Snake.h"
 #include "Tile.h"
+#include <glew.h>
 
 class Board
 {
@@ -11,14 +12,16 @@ public:
     ~Board();
 
     void draw();
+    void update();
 
-    static const int rows   = 100;
-    static const int cols   = 100;
+    static const int rows   = 50;
+    static const int cols   = 50;
     static const int width  = cols * Tile::width;
     static const int height = rows * Tile::height;
 
 private:
-    Tile tiles[rows][cols];
+    Tile  tiles[rows][cols];
+    Snake snake;
 };
 
 #endif

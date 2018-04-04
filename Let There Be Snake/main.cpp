@@ -40,6 +40,7 @@ int main(int argc, char *argv[])
             }
         }
 
+        board.update();
         board.draw();
         window.update();
     }
