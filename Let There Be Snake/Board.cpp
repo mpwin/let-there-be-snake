@@ -5,11 +5,22 @@ Board::~Board() {}
 
 void Board::draw()
 {
-    glBegin(GL_QUADS);
-        glColor3f(0.05f, 0.25f, 0.05f);
-        glVertex2f(0, 0);
-        glVertex2f(0, width);
-        glVertex2f(width, height);
-        glVertex2f(height, 0);
-    glEnd();
+    for (int row = 0; row < rows; row++)
+    {
+        for (int col = 0; col < cols; col++)
+        {
+            glBegin(GL_QUADS);
+                switch(tiles[row][col].type)
+                {
+                case Tile::BLANK : glColor3f(0.05f, 0.25f, 0.05f);
+                                   break;
+                }
+
+                glVertex2f(col,               row);
+                glVertex2f(col,               row + Tile::height);
+                glVertex2f(col + Tile::width, row + Tile::height);
+                glVertex2f(col + Tile::width, row);
+            glEnd();
+        }
+    }
 }

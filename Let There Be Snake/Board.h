@@ -16,6 +16,9 @@ public:
     static const int cols   = 100;
     static const int width  = cols * Tile::width;
     static const int height = rows * Tile::height;
+
+private:
+    Tile tiles[rows][cols];
 };
 
 #endif
