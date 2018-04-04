@@ -14,6 +14,8 @@ public:
     void draw();
     void update();
 
+    Snake *get_snake_ptr();
+
     static const int rows   = 50;
     static const int cols   = 50;
     static const int width  = cols * Tile::width;

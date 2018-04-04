@@ -29,6 +29,11 @@ void Board::draw()
 
 void Board::update()
 {
+    if (snake.is_moving())
+    {
+        snake.move();
+    }
+
     for (int row = 0; row < rows; row++)
     {
         for (int col = 0; col < cols; col++)
@@ -41,4 +46,9 @@ void Board::update()
     {
         tiles[tile.get_row()][tile.get_col()].set_type(Tile::SNAKE);
     }
+}
+
+Snake *Board::get_snake_ptr()
+{
+    return &snake;
 }

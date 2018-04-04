@@ -10,6 +10,7 @@ public:
     };
 
     Tile();
+    Tile(int row, int col);
     Tile(TYPE type, int row, int col);
     ~Tile();
 

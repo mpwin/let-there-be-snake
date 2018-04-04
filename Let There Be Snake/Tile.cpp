@@ -5,6 +5,12 @@ Tile::Tile()
     this->type = BLANK;
 }
 
+Tile::Tile(int row, int col)
+{
+    this->row = row;
+    this->col = col;
+}
+
 Tile::Tile(TYPE type, int row, int col)
 {
     this->type = type;
