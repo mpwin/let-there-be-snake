@@ -12,6 +12,16 @@ Snake::Snake()
 
 Snake::~Snake() {}
 
+int Snake::get_row()
+{
+    return row;
+}
+
+int Snake::get_col()
+{
+    return col;
+}
+
 void Snake::face_up()
 {
     this->direction = UP;

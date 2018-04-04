@@ -15,6 +15,8 @@ public:
     Snake();
     ~Snake();
 
+    int  get_row();
+    int  get_col();
     void face_up();
     void face_down();
     void face_left();

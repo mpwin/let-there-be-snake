@@ -1,7 +1,31 @@
 #include "Board.h"
 
-Board::Board()  {}
+Board::Board()
+{
+    this->game_over = false;
+}
+
 Board::~Board() {}
+
+void Board::check_game_over()
+{
+    if (snake.get_row() < 0 || rows <= snake.get_row() ||
+        snake.get_col() < 0 || cols <= snake.get_col())
+    {
+        this->game_over = true;
+        return;
+    }
+
+    for (int i = 1; i < snake.get_tiles().size(); i++)
+    {
+        if (snake.get_tiles()[i].get_row() == snake.get_row() &&
+            snake.get_tiles()[i].get_col() == snake.get_col())
+        {
+            this->game_over = true;
+            return;
+        }
+    }
+}
 
 void Board::draw()
 {
@@ -27,11 +51,23 @@ void Board::draw()
     }
 }
 
+bool Board::is_game_over()
+{
+    return game_over;
+}
+
 void Board::update()
 {
     if (snake.is_moving())
     {
         snake.move();
+    }
+
+    check_game_over();
+
+    if (game_over)
+    {
+        return;
     }
 
     for (int row = 0; row < rows; row++)

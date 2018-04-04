@@ -11,7 +11,9 @@ public:
     Board();
     ~Board();
 
+    void check_game_over();
     void draw();
+    bool is_game_over();
     void update();
 
     Snake *get_snake_ptr();
@@ -24,6 +26,7 @@ public:
 private:
     Tile  tiles[rows][cols];
     Snake snake;
+    bool  game_over;
 };
 
 #endif

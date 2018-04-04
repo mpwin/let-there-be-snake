@@ -59,11 +59,14 @@ int main(int argc, char *argv[])
             }
         }
 
-        current_time = SDL_GetTicks();
-        if (current_time > last_time + 30)
+        if (!board.is_game_over())
         {
-            board.update();
-            last_time = current_time;
+            current_time = SDL_GetTicks();
+            if (current_time > last_time + 30)
+            {
+                board.update();
+                last_time = current_time;
+            }
         }
 
         board.draw();
