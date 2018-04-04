@@ -6,3 +6,8 @@ Tile::Tile()
 }
 
 Tile::~Tile() {}
+
+Tile::TYPE Tile::get_type()
+{
+    return type;
+}

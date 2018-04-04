@@ -10,7 +10,7 @@ void Board::draw()
         for (int col = 0; col < cols; col++)
         {
             glBegin(GL_QUADS);
-                switch(tiles[row][col].type)
+                switch(tiles[row][col].get_type())
                 {
                 case Tile::BLANK : glColor3f(0.05f, 0.25f, 0.05f);
                                    break;
