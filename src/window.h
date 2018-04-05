@@ -1,9 +1,9 @@
 #ifndef WINDOW_H
 #define WINDOW_H
 
+#include "board.h"
 #include <glew.h>
 #include <SDL.h>
-#include "board.h"
 
 class Window
 {
