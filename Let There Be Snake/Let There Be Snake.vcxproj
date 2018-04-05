@@ -149,17 +149,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Window.cpp" />
-    <ClCompile Include="Board.cpp" />
+    <ClCompile Include="window.cpp" />
+    <ClCompile Include="board.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Snake.cpp" />
-    <ClCompile Include="Tile.cpp" />
+    <ClCompile Include="snake.cpp" />
+    <ClCompile Include="tile.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Window.h" />
-    <ClInclude Include="Board.h" />
-    <ClInclude Include="Snake.h" />
-    <ClInclude Include="Tile.h" />
+    <ClInclude Include="window.h" />
+    <ClInclude Include="board.h" />
+    <ClInclude Include="snake.h" />
+    <ClInclude Include="tile.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

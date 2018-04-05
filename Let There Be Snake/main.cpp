@@ -1,6 +1,6 @@
-#include "Board.h"
-#include "Snake.h"
-#include "Window.h"
+#include "board.h"
+#include "snake.h"
+#include "window.h"
 #include <glew.h>
 #include <SDL.h>
 #include <cstdlib>

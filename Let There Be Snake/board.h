@@ -1,8 +1,8 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-#include "Snake.h"
-#include "Tile.h"
+#include "snake.h"
+#include "tile.h"
 #include <glew.h>
 #include <ctime>
 #include <cstdlib>

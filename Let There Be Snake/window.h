@@ -3,7 +3,7 @@
 
 #include <glew.h>
 #include <SDL.h>
-#include "Board.h"
+#include "board.h"
 
 class Window
 {

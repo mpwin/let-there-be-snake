@@ -1,7 +1,7 @@
 #ifndef SNAKE_H
 #define SNAKE_H
 
-#include "Tile.h"
+#include "tile.h"
 #include <vector>
 
 class Snake
