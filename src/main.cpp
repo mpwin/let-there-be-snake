@@ -1,7 +1,8 @@
 #include "board.h"
 #include "snake.h"
 #include "window.h"
-#include <glew.h>
+#include <GL/glew.h>
+#include <GL/freeglut.h>
 #include <SDL.h>
 #include <cstdlib>
 

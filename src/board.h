@@ -3,7 +3,8 @@
 
 #include "snake.h"
 #include "tile.h"
-#include <glew.h>
+#include <GL/glew.h>
+#include <GL/freeglut.h>
 #include <ctime>
 #include <cstdlib>
 

@@ -2,7 +2,8 @@
 #define WINDOW_H
 
 #include "board.h"
-#include <glew.h>
+#include <GL/glew.h>
+#include <GL/freeglut.h>
 #include <SDL.h>
 
 class Window
